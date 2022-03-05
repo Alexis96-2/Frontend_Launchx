@@ -1,10 +1,108 @@
 body, header{
     background-color: antiquewhite;
 }
-#logofrancua {
-    /*width="32%" height="32%"*/
-    width:32%;
-    height:32%;
-    display:block; /*Gracias a display y margin centro imagen*/
-    margin:auto;
+footer{
+    background-color: #d80000;
+    display: flex;
+    margin-bottom: 0px;
 }
+a{
+    text-decoration: none;
+}
+/*------------- logo inicia ----------------------*/
+#logofrancua {
+    display:flex;
+}
+#logofrancua img {
+    display:flex; /*Gracias a display y margin centro imagen*/
+    margin-bottom: 5px;
+}
+#logofrancua a {
+    font-size:xx-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    margin-bottom: 50px;
+    color: rgb(29, 26, 26);
+    height: 0px;
+}
+#icono-logo{
+    display:flex;
+    width:10%;
+    height:auto;
+}
+#icono-logo2{
+    display:flex;
+    width:20%;
+    height:auto;
+}
+/*------------- logo acaba ----------------------*/
+/*------------- barra menu inicia ----------------------*/
+.barra-menu {
+    background-color: #d80000;
+    display: flex;
+    height: 5px;
+}
+
+/*------------- barra menu acaba ----------------------*/
+/*------------- cuerpo inicia ----------------------*/
+.sabores{
+    display: flex;
+    margin: auto;
+}
+#choco{
+    display: flex;
+    margin: auto;
+    width: 20%;
+    height: auto;
+}
+#vaini{
+    display: flex;
+    margin: auto;
+    width: 20%;
+    height: auto;
+}
+#fresa{
+    display: flex;
+    margin: auto;
+    width: 20%;
+    height: auto;
+}
+#coco{
+    display: flex;
+    margin: auto;
+    width: 20%;
+    height: auto;
+}
+#queso{
+    display: flex;
+    margin: auto;
+    width: 20%;
+    height: auto;
+}
+
+.sabores img{
+    display:flex;
+    width:60px;
+    height: auto;
+}
+/*------------- cuerpo acaba ----------------------*/
+
+/*------------- footer inicia ----------------------*/
+#footer{
+    width: 15%;
+    height: 15%;
+}
+#pasfrancua{
+    width: 15%;
+    height: 15%;
+    margin-top: 30px;
+}
+#datos {
+    color: white;
+    display: flex;
+    margin-top: 20px;
+}
+#datos li {
+    list-style:none
+}
+/*------------- footer acaba ----------------------*/
