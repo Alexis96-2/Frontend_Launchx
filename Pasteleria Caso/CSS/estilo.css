@@ -91,6 +91,14 @@ a{
 .datosform {
     display: flex;
 }
+.datosform div{
+    margin: auto;
+    width: 33%;
+}
+.datosform input{
+    display: flex;
+    width: auto;
+}
 /*------------- cuerpo acaba ----------------------*/
 
 /*------------- footer inicia ----------------------*/
