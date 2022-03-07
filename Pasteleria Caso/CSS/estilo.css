@@ -45,6 +45,9 @@ a{
 
 /*------------- barra menu acaba ----------------------*/
 /*------------- cuerpo inicia ----------------------*/
+.secciontitulo{
+    display: flex;
+}
 .sabores{
     display: flex;
     margin: auto;
@@ -84,6 +87,9 @@ a{
     display:flex;
     width:60px;
     height: auto;
+}
+.datosform {
+    display: flex;
 }
 /*------------- cuerpo acaba ----------------------*/
 
