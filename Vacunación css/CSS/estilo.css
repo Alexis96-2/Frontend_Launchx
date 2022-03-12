@@ -1,5 +1,5 @@
 body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #333;
     font-size: 1.2rem;
     line-height: 1.6em;
@@ -103,6 +103,16 @@ display: none;
     text-align: center;
     color: #2949C7;
     margin-top: 6rem;
+}
+
+.footer a.logo{
+    color: #2949C7;
+    letter-spacing: 5px;
+    font-size: 1.5em;
+}
+.footer a{
+    color: #6D7B93;
+    text-decoration: none;
 }
 
 @media only screen and(max-width: 700px) {
