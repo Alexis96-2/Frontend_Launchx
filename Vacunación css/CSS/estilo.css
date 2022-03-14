@@ -176,6 +176,25 @@ display: none;
     content: ""
     }
 /*---------------------------------------------------------*/
+
+
+/*------------------------Acordeon--------------------------*/
+.acordeon input{
+    display: none;
+}
+.acordeon-titulo{
+    display: block;
+    cursor: pointer;
+}
+.acordeon-contenido{
+    height: 0;
+    overflow: hidden;
+    margin-left: 2px;
+}
+.acordeon input:checked ~ .acordeon-contenido{
+    height: auto;
+}
+/*----------------------------------------------------------*/
 .footer{
     background: #E6F4FC;
     padding: 4rem 0;
