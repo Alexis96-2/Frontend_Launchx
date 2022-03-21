@@ -11,16 +11,34 @@
             <script type="text/javascript" src="javascript/funciones.js"></script>
        </head>
        <body>
-           <header>
-                <h1>Pokedex LaunchX</h1>
+           <header class="header">
+                     <center><img src="imagenes/Pokedex-Launchx-logo.png" alt="PokedexLaunchx"></center>
            </header>
-           <main>
-                <input type="text" placeholder="Nombre/número del pokemon" id="pokeName" name="pokeName">
-                <br>
-                <img src="imagenes/apagado.jpg" alt="pokemon elegido" width="150px" height="150px">
-                <br>
-                <button>Buscar pokemon</button>
+           <!-------------------------------------------------------------------------------------------------------------------------------------->
+           <main class="main">
+               <div class="container">
+                    <img src="imagenes/apagado.jpg" alt="pokemon elegido" id="pokeImg" name="pokeImg" width="150px" height="150px">
+                    <h2 id="Nombrepoke" name="Nombrepoke">Nombre/#</h2>
+                    <div>
+                         <h4>Ataque</h4>
+                         <p id="ataqueStat" name="ataqueStat">0</p>
+                    </div>
+                    <div>
+                         <div>
+                              <h4>Tipo: </h4>
+                              <p id="ataqueStat" name="ataqueStat">0</p>
+                         </div>
+                         <div>
+                              <h4>Movimientos</h4>
+                              <p>-,-,-,-.</p>
+                         </div>
+                    </div>
+                    <input type="text" placeholder="Nombre/número del pokemon" id="pokeName" name="pokeName" onkeyup="javascript:this.value=this.value.toLowerCase();">
+                    <br>
+                    <button onclick="imprimir()">Buscar pokemon</button>
+               </div>
            </main>
+           <!-------------------------------------------------------------------------------------------------------------------------------------->
            <footer>
                
            </footer>
