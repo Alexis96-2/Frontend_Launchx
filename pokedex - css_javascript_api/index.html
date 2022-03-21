@@ -17,25 +17,73 @@
            <!-------------------------------------------------------------------------------------------------------------------------------------->
            <main class="main">
                <div class="container">
-                    <img src="imagenes/apagado.jpg" alt="pokemon elegido" id="pokeImg" name="pokeImg" width="150px" height="150px">
-                    <h2 id="Nombrepoke" name="Nombrepoke">Nombre/#</h2>
-                    <div>
-                         <h4>Ataque</h4>
-                         <p id="ataqueStat" name="ataqueStat">0</p>
-                    </div>
-                    <div>
-                         <div>
-                              <h4>Tipo: </h4>
-                              <p id="ataqueStat" name="ataqueStat">0</p>
+                    <div class="pokedex">
+                         <div class="pantalla">
+                              <div class="imagenPokemon">
+                                   <img src="imagenes/pokeball-pixel.png" alt="pokemon elegido" id="pokeImg" name="pokeImg" width="150px" height="150px">
+                                   <center><h2 id="Nombrepoke" name="Nombrepoke">Nombre/#</h2></center>
+                              </div>
+                              <!----------------------------------------------------------->
+                              <!------------------------Estadisticas----------------------->
+                              <!----------------------------------------------------------->
+                              <div id="estadisticas-zona">
+                                   <div class="estadisticas-orden">
+                                        <h4>hp</h4>
+                                        <p id="Stat0" name="Stat0">0</p>
+                                   </div>
+                                   <div class="estadisticas-orden">
+                                        <h4>ataque</h4>
+                                        <p id="Stat1" name="Stat1">0</p>
+                                   </div>
+                                   <div class="estadisticas-orden">
+                                        <h4>defensa</h4>
+                                        <p id="Stat2" name="Stat2">0</p>
+                                   </div>
+                                   <div class="estadisticas-orden">
+                                        <h4>ataque especial</h4>
+                                        <p id="Stat3" name="Stat3">0</p>
+                                   </div>
+                                   <div class="estadisticas-orden">
+                                        <h4>defensa especial</h4>
+                                        <p id="Stat4" name="Stat4">0</p>
+                                   </div>
+                                   <div class="estadisticas-orden">
+                                        <h4>velocidad</h4>
+                                        <p id="Stat5" name="Stat5">0</p>
+                                   </div>
+                              </div>
+                              <!----------------------------------------------------------->
+                              <!----------------------------------------------------------->
                          </div>
-                         <div>
-                              <h4>Movimientos</h4>
-                              <p>-,-,-,-.</p>
+     
+     
+                         <!----------------------------------------------------------->
+                         <!--------------------------Datos---------------------------->
+                         <!----------------------------------------------------------->
+                         <div class="pantalla-inferior">
+                              <div class="tipo-poke">
+                                   <h4>Tipo: </h4>
+                                   <p id="tipos" name="tipos">-</p>
+                              </div>
+                              <div class="movimientos-box">
+                                   <h4>Movimientos</h4>
+                                   <p id="movePoke" name="movePoke">-,-,-,-.</p>
+                              </div>
                          </div>
+                         <!----------------------------------------------------------->
+                         <!----------------------------------------------------------->
+     
+                         <!----------------------------------------------------------->
+                         <!--------------------------boton---------------------------->
+                         <!----------------------------------------------------------->
+                         <div class="boton-orden boton-decorativo">
+                              <input type="text" placeholder="Nombre del pokemon" id="pokeName" name="pokeName" onkeyup="javascript:this.value=this.value.toLowerCase();">
+                              <br>
+                              <button onclick="imprimir()">BUSCAR</button>
+                         </div>
+                         <!----------------------------------------------------------->
+                         <!----------------------------------------------------------->
                     </div>
-                    <input type="text" placeholder="Nombre/número del pokemon" id="pokeName" name="pokeName" onkeyup="javascript:this.value=this.value.toLowerCase();">
-                    <br>
-                    <button onclick="imprimir()">Buscar pokemon</button>
                </div>
            </main>
            <!-------------------------------------------------------------------------------------------------------------------------------------->

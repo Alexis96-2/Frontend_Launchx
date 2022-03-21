@@ -4,31 +4,150 @@ body {
     background-size: 100% 100%;
 }
 .header{
-    padding: 2rem 0;
-    
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    
+    padding: 0;
+    background-color: rgb(21, 24, 24);
+     
 }
 .header img{
     width: 35%;
 }
 
 .container{
-    width:90%;
+    width:100%;
     max-width: 850px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .main{
-    padding: 10rem;
+    padding-top: 6rem;
 }
 
 /*--------------------------------------------------------------------------------------------------*/
 /*                                      Diseño pokedex                                              */
 /*--------------------------------------------------------------------------------------------------*/
+.pokedex{
+    width: 400px;
+    height: 800px;
+    background-color: rgb(198, 10, 10);
+    box-shadow: inset -8px -8px 0 0 rgba(0, 0, 0, 0.161);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.pantalla{
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(203, 206, 211);
+    color: rgb(21, 24, 24);
 
+    display:flex;
+    justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
+    align-items: center;
+    flex-wrap: wrap;
+
+    box-shadow: inset 8px 8px 0 0 rgba(0, 0, 0, 0.161);
+}
+.imagenPokemon{
+    margin: auto;
+    width: 180px;
+    height: auto;
+    align-items: center;
+}
+.pantalla img p h4{
+    margin: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.estadisticas-zona{
+    width: 120px;
+    height: auto;
+    align-items: center;
+}
+.estadisticas-orden{/* Esto va dentro de estadisticas-zone, */
+    width: 110px;/* pero establezco un ancho aquí para poder abarcar la zona*/
+    font-size:xx-small;
+    margin-right: 8px;
+    display: flex;
+    justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
+    flex-wrap: wrap;
+}
+.pantalla-inferior{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(203, 206, 211);
+    color: rgb(21, 24, 24);
+
+    align-items: center;
+    flex-wrap: wrap;
+
+    box-shadow: inset 8px -4px 0 0 rgba(0, 0, 0, 0.161);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.tipo-poke{
+    margin-left: 20px; /* Un margen izquierdo para no topar con la sombra*/
+    width: 270px;
+    display: flex;
+    justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
+    flex-wrap: wrap;
+    align-items: center;
+}
+.movimientos-box{
+    width: 280px;
+    height: 180px;
+}
+.movimientos-box h4{
+    margin-left: 20px;
+}
+.movimientos-box p{
+    height: 160px;
+    overflow: auto;
+    margin-left: 15px;
+    scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+}
+.boton-orden{
+    margin-top: 25px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+.boton-decorativo button{
+    font-size: 24px;
+    width: 180px;
+
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    box-shadow: inset -8px -8px 0 0 rgba(0, 0, 0, 0.161);
+}
+.boton-decorativo button:hover{
+    background-color: #3abbe6;
+    color: white;
+}
+.boton-decorativo input{
+    font-size: 30px;
+    width: 300px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+}
 
 /*--------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 700px) {
+    body {
+        margin: 0;
+        background-image: url("../imagenes/fondo1.jpeg");
+        background-size: 100% 100%;
+    }
+    .main{
+        padding-top: 0;
+    }
+}
