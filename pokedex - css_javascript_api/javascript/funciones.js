@@ -13,7 +13,7 @@ const imprimir = () => {
 
         let nombrePoke = data.name; // nombre
         let idPoke = data.id; // id del pokemon
-        let pokeBasicData = nombrePoke + " / #" + idPoke;// Almacenamos nombre e id como gustemos
+        let pokeBasicData = nombrePoke + " #" + idPoke;// Almacenamos nombre e id como gustemos
         const tituloPoke = document.getElementById("Nombrepoke");//Buscamos donde poner ambos
         tituloPoke.textContent = pokeBasicData;//Pasamos el resultado donde se observa
 

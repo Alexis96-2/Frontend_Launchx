@@ -3,6 +3,12 @@ body {
     background-image: url("../imagenes/fondo1.jpeg");
     background-size: 100% 100%;
 }
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../Font/Mario-Kart-DS.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 .header{
     padding: 0;
     background-color: rgb(21, 24, 24);
@@ -51,6 +57,8 @@ body {
     box-shadow: inset 8px 8px 0 0 rgba(0, 0, 0, 0.161);
 }
 .imagenPokemon{
+    font-family: 'Open Sans';
+    text-transform: uppercase;
     margin: auto;
     width: 180px;
     height: auto;
@@ -67,6 +75,7 @@ body {
 }
 .estadisticas-orden{/* Esto va dentro de estadisticas-zone, */
     width: 110px;/* pero establezco un ancho aquí para poder abarcar la zona*/
+    font-family: 'Open Sans';
     font-size:xx-small;
     margin-right: 8px;
     display: flex;
@@ -86,6 +95,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .tipo-poke{
+    font-family: 'Open Sans';
     margin-left: 20px; /* Un margen izquierdo para no topar con la sombra*/
     width: 270px;
     display: flex;
@@ -98,9 +108,11 @@ body {
     height: 180px;
 }
 .movimientos-box h4{
+    font-family: 'Open Sans';
     margin-left: 20px;
 }
 .movimientos-box p{
+    font-family: 'Open Sans';
     height: 160px;
     overflow: auto;
     margin-left: 15px;
@@ -116,6 +128,7 @@ body {
     flex-direction: column;
 }
 .boton-decorativo button{
+    font-family: 'Open Sans';
     font-size: 24px;
     width: 180px;
 
@@ -129,6 +142,7 @@ body {
     color: white;
 }
 .boton-decorativo input{
+    font-family: 'Open Sans';
     font-size: 30px;
     width: 300px;
     -moz-border-radius: 10px;
