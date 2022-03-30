@@ -8,20 +8,38 @@
             <link rel="shortcut icon" href="/favicon.ico" />
             <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
             <meta charset="utf-8">
-            <script type="text/javascript" src="javascript/funciones.js"></script>
+            <script src="https://unpkg.com/vue@3"></script>
+            
        </head>
        <body>
            <!-----------------------------------------Cabecera------------------------------------------------>
-           <header>
-
+           <header class="header">
+            <center><div class="logo-header">
+                <img src="imagenes/Logo pasteleria.png" alt="" width="150px"><br>
+                <img src="imagenes/PASTELERIA FRANCUA - left.png" alt="" width="200px"><img src="imagenes/PASTELERIA FRANCUA - right.png" alt="" width="200px">
+            </div></center>
            </header>
            <!-----------------------------------------Principal----------------------------------------------->
-           <main>
+           <main class="main">
+            <div id="app">{{ message }}</div>
+            <div class="principal">
+                <div class="sabores">
 
+                </div>
+                <div class="decorar">
+
+                </div>
+                <div class="formulario">
+
+                </div>
+            </div>
            </main>
            <!--------------------------------------------Pie-------------------------------------------------->
-           <footer>
-
+           <footer class="footer">
+                <div class="logo-footer">
+                    
+                </div>
            </footer>
        </body>
+       <script type="text/javascript" src="javascript/funciones.js"></script>
     </html>
