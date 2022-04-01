@@ -2,12 +2,27 @@
   <div class="hello">
     <h2>Sabores</h2>
     <div class="sabores">
-      <div class="sabor" v-for="sabor in $store.state.sabores" :key="sabor.id">
-        <input type="checkbox" name="{{sabor.name}}" id="{{sabor.name}}">
-        <label for="{{sabor.name}}">
-          <img :src="sabor.image" :alt="sabor.name">
-          {{sabor.name}} {{sabor.price}}
-        </label>
+      <div class="sabor" v-for="sabor in $store.getters.sabores" :key="sabor.id">
+        <!----------------Pasteles------------------------->
+        <div class="pasteles">
+            <div class="container">
+              <img :src="sabor.image" :alt="sabor.name">
+            <div class="name-product">
+              {{sabor.name}}
+            </div>
+             <div class="price-product">
+               {{sabor.price}}
+             </div>
+            </div>
+        </div>
+        <!-------------------Cantidad---------------------->
+        <div class="contador">
+          <button :id="'restar'+sabor.id" @click="$store.commit('bajarContadorSabor', sabor.id)">-</button>
+          <div class="counter">
+            {{sabor.pedidos}}
+          </div>
+          <button :id="'sumar'+sabor.id" @click="$store.commit('subirContadorSabor', sabor.id)">+</button>
+        </div>
       </div>
     </div>
   </div>
@@ -15,7 +30,7 @@
 
 <script>
 export default {
- 
+
     
 }
 
@@ -27,13 +42,35 @@ export default {
   width: 100px;
 }
 .sabores{
+  margin: 50px;
+}
+.sabor{
+  font-size: 20px;
+  display: flex;
+  /*justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pasteles{
+  width: 50%;
   display: flex;
   justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
   align-items: center;
   flex-wrap: wrap;
 }
-.sabor{
-  font-size: 20px;
+.container{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contador{
+  width:50%;
+  display: flex;
+  justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
+  align-items: center;
+  flex-wrap: wrap;
 }
 h3 {
   margin: 40px 0 0;
@@ -51,5 +88,10 @@ li {
 }
 a {
   color: #42b983;
+}
+button{
+  font-size: 40px;
+  width: 70px;
+  margin:0 10px;
 }
 </style>
