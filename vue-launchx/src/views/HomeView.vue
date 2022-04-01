@@ -5,14 +5,22 @@
       <img alt="Vue logo" src="../assets/francua-left.png">
       <img alt="Vue logo" src="../assets/francua-right.png">
     </div>
+    <sabores></sabores>
+    <adornos></adornos>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
+import sabores from '@/components/sabores.vue'
+import adornos from '@/components/adornos.vue'
 
 export default {
   name: 'HomeView',
+  components: {
+    sabores,
+    adornos
+  }
 }
 </script>
 <style scoped>
