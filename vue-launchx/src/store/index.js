@@ -33,7 +33,7 @@ export default createStore({
     ],
     pedidos:[
       {
-        id: 0, name:"Nombre del Cliente", telefono: "Numero telefonico", pasteles: [//Los pasteles seccionados
+        id: 0, name:"Nombre del Cliente", telefono: "Numero telefonico", correo:"Correo Electronico", pasteles: [//Los pasteles seccionados
           {name:"Chocolate", cantidad:"#" }, {name: "Coco", cantidad:"#"}, {name: "Leche", cantidad:"#"}, {name: "Queso", cantidad:"#"}],
           adornos: [{name:"Flores", cantidad:"#" }, {name: "Paredes", cantidad:"#"}, {name: "Perlas", cantidad:"#"}, {name: "Imagen", cantidad:"#"}],
           description: "Descripción"
@@ -41,6 +41,7 @@ export default createStore({
     ],
     name:"",
     tel:"",
+    correo:"",
     descrip:"",
   },
   getters: {
@@ -49,6 +50,7 @@ export default createStore({
     pedidos: state => state.pedidos,
     name: state => state.name,
     tel: state => state.tel,
+    correo: state => state.correo,
     descrip: state => state.descrip,
   },
   mutations: {

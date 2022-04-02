@@ -11,9 +11,13 @@
                     <label for="telefono">Telefono</label>
                     <input id="telefono" v-model="$store.getters.tel" type="text" name="telefono">
                 </div>
+                <div class="parte">
+                    <label for="correo">Correo</label>
+                    <input id="correo" v-model="$store.getters.correo" type="email" name="correo">
+                </div>
             </div>
             <p>Decribe el/los pastel(s)</p>
-            <textarea name="descripcion" id="" cols="40" rows="10"></textarea>
+            <textarea v-model="$store.getters.descrip" name="descripcion" id="descripcion" cols="40" rows="10"></textarea>
             <br>
             <button>PEDIR</button>
         </form>

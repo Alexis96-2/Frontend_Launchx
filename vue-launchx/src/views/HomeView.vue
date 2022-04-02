@@ -9,6 +9,7 @@
     <sabores></sabores>
     <adornos></adornos>
     <formulario></formulario>
+    <pie></pie>
   </div>
 </template>
 
@@ -17,13 +18,15 @@
 import sabores from '@/components/sabores.vue'
 import adornos from '@/components/adornos.vue'
 import formulario from '@/components/formulario.vue'
+import pie from '@/components/footer.vue'
 
 export default {
   name: 'HomeView',
   components: {
     sabores,
     adornos,
-    formulario
+    formulario,
+    pie
   }
 }
 </script>

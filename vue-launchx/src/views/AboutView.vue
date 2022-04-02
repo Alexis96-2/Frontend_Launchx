@@ -5,9 +5,19 @@
       <img alt="Vue logo" src="../assets/francua-left.png">
       <img alt="Vue logo" src="../assets/francua-right.png">
     </div>
-    <h1>This is an about page</h1>
+    <pedidos></pedidos>
   </div>
 </template>
+
+<script>
+import pedidos from '@/components/tabla-datos.vue'
+export default {
+  name: 'AboutView',
+  components: {
+    pedidos
+  }
+}
+</script>
 
 <style scoped>
 .about img{

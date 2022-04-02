@@ -1,0 +1,90 @@
+<template>
+    <div class="pedidos">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>TELEFONO</th>
+                <th>CORREO</th>
+                <th><table>
+                    <tr>
+                        <th><table>
+                            <tr>
+                                <th>Chocolate</th>
+                                <th>#</th>
+                            </tr>
+                            </table>
+                        </th>
+                        <th><table>
+                            <tr>
+                                <th>Coco</th>
+                                <th>#</th>
+                            </tr>
+                            </table>
+                        </th>
+                        <th><table>
+                            <tr>
+                                <th>Leche</th>
+                                <th>#</th>
+                            </tr>
+                            </table>
+                        </th>
+                        <th><table>
+                            <tr>
+                                <th>Queso</th>
+                                <th>#</th>
+                            </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </table>
+                </th>
+                <th><table>
+                    <tr>
+                        <th><table>
+                            <tr>
+                                <th>Flores</th>
+                                <th>#</th>
+                            </tr>
+                            </table>
+                        </th>
+                        <th><table>
+                            <tr>
+                                <th>Paredes</th>
+                                <th>#</th>
+                            </tr>
+                            </table>
+                        </th>
+                        <th><table>
+                            <tr>
+                                <th>Perlas</th>
+                                <th>#</th>
+                            </tr>
+                            </table>
+                        </th>
+                        <th><table>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>#</th>
+                            </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </table>
+                </th>
+                <th>DESCRIPCIÓN</th>
+            </tr>
+            <div class="Elaborar automaticamente">
+                <tr>
+                    <td>
+
+                    </td>
+                </tr>
+            </div>
+        </table>
+    </div>
+</template>
+
+<style scoped>
+
+</style>
