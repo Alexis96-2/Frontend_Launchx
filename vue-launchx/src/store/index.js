@@ -39,10 +39,17 @@ export default createStore({
           description: "Descripción"
       },
     ],
+    name:"",
+    tel:"",
+    descrip:"",
   },
   getters: {
     sabores: state => state.sabores,
     adornos: state => state.adornos,
+    pedidos: state => state.pedidos,
+    name: state => state.name,
+    tel: state => state.tel,
+    descrip: state => state.descrip,
   },
   mutations: {
     bajarContadorSabor(getters, n){

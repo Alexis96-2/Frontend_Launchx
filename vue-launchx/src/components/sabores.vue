@@ -90,8 +90,20 @@ a {
   color: #42b983;
 }
 button{
-  font-size: 40px;
   width: 70px;
   margin:0 10px;
+  border-color: #52bdff;
+  background: #0D94E5;
+  color:white;
+  font-size: 1.2em;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  box-shadow: inset -8px -8px 0 0 rgba(0, 0, 0, 0.161);
+}
+button:hover{
+  border-color: #83ff52;
+  background: #0beb30;
+  color:white;
 }
 </style>
