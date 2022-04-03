@@ -96,7 +96,8 @@
                     {{pedido.description}}
                 </td>
                 <td>
-                    <button :id="'pedido'+pedido.id" @click="$store.dispatch('eliminarPedidio', index)">-</button>
+                    <button :id="'pedidoAceptar'+pedido.id" @click="$store.dispatch('aceptarPedidio', index)">+</button>
+                    <button :id="'pedidoEliminar'+pedido.id" @click="$store.dispatch('eliminarPedidio', index)">-</button>
                 </td>
             </tr>
         </table>

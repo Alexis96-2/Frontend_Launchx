@@ -45,10 +45,10 @@ export default createStore({
     descrip:"",
     resultados_sobrantes: [
       {
-        sabores:{chocolate:200,coco:200,leche:200,queso: 200,},
+        sabores:[200,200,200,200],//Pasteles[Chocolate, Coco, Leche, Queso] <--- en ese orden
       },
       {
-        adornos:{flores:200,paredes:200,perlas:200,imagen: 200,},
+        adornos:[200,200,200,200],//adornos[flores, paredes, perlas, imagen] <--- en ese orden
       }
     ],
   },
@@ -89,12 +89,6 @@ export default createStore({
       console.log(getters.adornos[n].pedidos);
     },
     guardarPedido(state){
-      /*console.log(state.adornos[0].name);
-      console.log(state.adornos[0].pedidos);
-      console.log(state.sabores[2].name);
-      console.log(state.sabores[2].pedidos);
-      const idGet = state.pedidos.length;
-      console.log(idGet);*/
       if(state.name || state.tel || state.correo || state.descrip){
         const idGet = state.pedidos.length;
         const nombre = state.name;
@@ -114,23 +108,27 @@ export default createStore({
         //adornos[flores, paredes, perlas, imagen] <--- en ese orden
         description: describe
         });
-        state.resultados_sobrantes.push({ sabores: {
-          chocolate: this.chocolate - state.sabores[0].pedidos,
-          coco: this.coco - state.sabores[1].pedidos,
-          leche: this.leche - state.sabores[2].pedidos,
-          queso: this.queso - state.sabores[3].pedidos,
-        }, adornos:{
-          flores: this.flores - state.adornos[0].pedidos,
-          paredes: this.paredes - state.adornos[1].pedidos,
-          perlas: this.perlas - state.adornos[2].pedidos,
-          imagen: this.imagen - state.adornos[3].pedidos,}
-      },)
       }else{
         console.log('¿Qué paso?')
       }
     },
     eliminarPedidio(state, n){
       //const total = state.pedidos.length;
+      state.pedidos.splice(n, 1);
+    },
+    aceptarPedidio(state, n){
+      const saborP= state.pedidos[n].pasteles;//Sabores pedidos siendo aceptados
+      const adornoP= state.pedidos[n].adornos;//Adornos pedidos siendo aceptados
+      const saborT= state.resultados_sobrantes[0].sabores;//Sabores restantes actuales
+      const adornoT = state.resultados_sobrantes[1].adornos;//Adornos restantes actuales
+      state.resultados_sobrantes[0].sabores.splice(0, 1, saborT[0]-saborP[0]);
+      state.resultados_sobrantes[0].sabores.splice(1, 1, saborT[1]-saborP[1]);
+      state.resultados_sobrantes[0].sabores.splice(2, 1, saborT[2]-saborP[2]);
+      state.resultados_sobrantes[0].sabores.splice(3, 1, saborT[3]-saborP[3]);
+      state.resultados_sobrantes[1].adornos.splice(0, 1, adornoT[0]-adornoP[0]);
+      state.resultados_sobrantes[1].adornos.splice(1, 1, adornoT[1]-adornoP[1]);
+      state.resultados_sobrantes[1].adornos.splice(2, 1, adornoT[2]-adornoP[2]);
+      state.resultados_sobrantes[1].adornos.splice(3, 1, adornoT[3]-adornoP[3]);
       state.pedidos.splice(n, 1);
     }
 
@@ -141,6 +139,9 @@ export default createStore({
         return item.mensaje.match(/Foo/)
       })*/
       this.commit("eliminarPedidio", n);
+    },
+    async aceptarPedidio({commit}, n){
+      this.commit("aceptarPedidio", n);
     }
   },
   modules: {
