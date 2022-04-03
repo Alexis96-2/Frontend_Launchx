@@ -5,15 +5,18 @@
       <img alt="Vue logo" src="../assets/francua-left.png">
       <img alt="Vue logo" src="../assets/francua-right.png">
     </div>
+    <sabores></sabores>
     <pedidos></pedidos>
   </div>
 </template>
 
 <script>
+import sabores from '@/components/sobrante-sabor.vue'
 import pedidos from '@/components/tabla-datos.vue'
 export default {
   name: 'AboutView',
   components: {
+    sabores,
     pedidos
   }
 }

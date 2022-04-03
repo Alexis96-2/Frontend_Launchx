@@ -43,6 +43,14 @@ export default createStore({
     tel:"",
     correo:"",
     descrip:"",
+    resultados_sobrantes: [
+      {
+        sabores:{chocolate:200,coco:200,leche:200,queso: 200,},
+      },
+      {
+        adornos:{flores:200,paredes:200,perlas:200,imagen: 200,},
+      }
+    ],
   },
   getters: {
     sabores: state => state.sabores,
@@ -52,6 +60,8 @@ export default createStore({
     tel: state => state.tel,
     correo: state => state.correo,
     descrip: state => state.descrip,
+    resultados_sobrantes: state => state.resultados_sobrantes,
+
   },
   mutations: {
     bajarContadorSabor(getters, n){
@@ -104,6 +114,17 @@ export default createStore({
         //adornos[flores, paredes, perlas, imagen] <--- en ese orden
         description: describe
         });
+        state.resultados_sobrantes.push({ sabores: {
+          chocolate: this.chocolate - state.sabores[0].pedidos,
+          coco: this.coco - state.sabores[1].pedidos,
+          leche: this.leche - state.sabores[2].pedidos,
+          queso: this.queso - state.sabores[3].pedidos,
+        }, adornos:{
+          flores: this.flores - state.adornos[0].pedidos,
+          paredes: this.paredes - state.adornos[1].pedidos,
+          perlas: this.perlas - state.adornos[2].pedidos,
+          imagen: this.imagen - state.adornos[3].pedidos,}
+      },)
       }else{
         console.log('¿Qué paso?')
       }
