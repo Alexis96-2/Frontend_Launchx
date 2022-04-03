@@ -2,89 +2,132 @@
     <div class="pedidos">
         <table>
             <tr>
-                <th>ID</th>
-                <th>NOMBRE</th>
-                <th>TELEFONO</th>
-                <th>CORREO</th>
+                <th class="digito">ID</th>
+                <th class="datos-personal">NOMBRE</th>
+                <th class="datos-personal">TELEFONO</th>
+                <th class="datos-personal">CORREO</th>
                 <th><table>
-                    <tr>
-                        <th><table>
-                            <tr>
-                                <th>Chocolate</th>
-                                <th>#</th>
-                            </tr>
-                            </table>
-                        </th>
-                        <th><table>
-                            <tr>
-                                <th>Coco</th>
-                                <th>#</th>
-                            </tr>
-                            </table>
-                        </th>
-                        <th><table>
-                            <tr>
-                                <th>Leche</th>
-                                <th>#</th>
-                            </tr>
-                            </table>
-                        </th>
-                        <th><table>
-                            <tr>
-                                <th>Queso</th>
-                                <th>#</th>
-                            </tr>
-                            </table>
-                        </th>
-                    </tr>
-                </table>
+                        <tr>
+                            <th class="digito">
+                                Chocolate
+                            </th>
+                            <th class="digito">
+                                Coco
+                            </th>
+                            <th class="digito">
+                                Leche
+                            </th>
+                            <th class="digito">
+                                Queso
+                            </th>
+                        </tr>
+                    </table>
                 </th>
                 <th><table>
-                    <tr>
-                        <th><table>
-                            <tr>
-                                <th>Flores</th>
-                                <th>#</th>
-                            </tr>
-                            </table>
-                        </th>
-                        <th><table>
-                            <tr>
-                                <th>Paredes</th>
-                                <th>#</th>
-                            </tr>
-                            </table>
-                        </th>
-                        <th><table>
-                            <tr>
-                                <th>Perlas</th>
-                                <th>#</th>
-                            </tr>
-                            </table>
-                        </th>
-                        <th><table>
-                            <tr>
-                                <th>Imagen</th>
-                                <th>#</th>
-                            </tr>
-                            </table>
-                        </th>
-                    </tr>
-                </table>
+                        <tr>
+                            <th class="digito">
+                                Flores
+                            </th>
+                            <th class="digito">
+                                Paredes
+                            </th>
+                            <th class="digito">
+                                Perlas
+                            </th>
+                            <th class="digito">
+                                Imagen
+                            </th>
+                        </tr>
+                    </table>
                 </th>
-                <th>DESCRIPCIÓN</th>
+                <th class="datos-pastel">DESCRIPCIÓN</th>
+                <th class="Btn-Elminar">ACCIÓN</th>
             </tr>
-            <div class="Elaborar automaticamente">
-                <tr>
-                    <td>
-
-                    </td>
-                </tr>
-            </div>
+            <tr class="Elaborar-automaticamente" v-for="(pedido, index) in $store.getters.pedidos" :key="pedido.id">
+                <td>
+                    {{pedido.id}}
+                </td>
+                <td>
+                    {{pedido.name}}
+                </td>
+                <td>
+                    {{pedido.telefono}}
+                </td>
+                <td>
+                    {{pedido.correo}}
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                {{pedido.pasteles[0]}}
+                            </td>
+                            <td>
+                                {{pedido.pasteles[1]}}
+                            </td>
+                            <td>
+                                {{pedido.pasteles[2]}}
+                            </td>
+                            <td>
+                                {{pedido.pasteles[3]}}
+                            </td>
+                        </tr>
+                    </table>   
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                {{pedido.adornos[0]}}
+                            </td>
+                            <td>
+                                {{pedido.adornos[1]}}
+                            </td>
+                            <td>
+                                {{pedido.adornos[2]}}
+                            </td>
+                            <td>
+                                {{pedido.adornos[3]}}
+                            </td>
+                        </tr>
+                    </table> 
+                </td>
+                <td>
+                    {{pedido.description}}
+                </td>
+                <td>
+                    <button :id="'pedido'+pedido.id" @click="$store.dispatch('eliminarPedidio', index)">-</button>
+                </td>
+            </tr>
         </table>
     </div>
 </template>
-
+<script>
+export default {
+}
+</script>
 <style scoped>
+.pedidos{
+    width: 100%;
+}
+table{
+    margin: 10px;
+    width: 90%;
+}
+tr{
+    margin-top: 5px;
+}
+.digito{
+    width: 5%;
+}
+.datos-personal{
+    width: 7%;
+}
+.datos-pastel{
+    width: 30%;
+}
+.Btn-Elminar{
+    width: 7%;
+}
 
 </style>
